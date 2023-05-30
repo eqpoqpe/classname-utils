@@ -5,12 +5,16 @@ function classNameConcat(baseClassName: string, list: Array<string>): string {
     const a_r = isMeaningless(a);
     const c_r = isMeaningless(c);
 
-    if (!a_r.result && !c_r.result) {
-      return a_r.data.concat(" ", c_r.data);
+    if (a_r.result) {
+      return c;
     }
 
-    return a;
-  })).trim();
+    if (c_r.result) {
+      return a;
+    }
+
+    return a.concat(" ", c_r.data);
+  }, "")).trim();
 }
 
 export {
