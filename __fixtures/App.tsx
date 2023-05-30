@@ -1,10 +1,10 @@
-import { classListConcat } from "classname-utils";
+import { classNameConcat } from "classname-utils";
 
 function App(): JSX.Element {
   const [theme, setTheme] = useState(false);
 
   return (
-    <div className={classListConcat("base", [theme ? "dark" : "light"])}>
+    <div className={classNameConcat("base", [theme ? "dark" : "light"])}>
     </div>
   );
 }
