@@ -1,7 +1,7 @@
 import { isMeaningless } from "./String";
 
-function classNameConcat(baseClassName: string, list: Array<string>): string {
-  return baseClassName.concat(" ", list.reduce((a, c) => {
+function classNameConcat(list: Array<string>): string {
+  return list.reduce((a, c) => {
     const a_r = isMeaningless(a);
     const c_r = isMeaningless(c);
 
@@ -14,7 +14,7 @@ function classNameConcat(baseClassName: string, list: Array<string>): string {
     }
 
     return a.concat(" ", c_r.data);
-  }, "")).trim();
+  }, "").trim();
 }
 
 export {
