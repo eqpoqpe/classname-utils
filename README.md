@@ -1,5 +1,5 @@
 # ClassName Utils
-🔮
+🔮 as you know.
 
 ## Installation
 ```shell
