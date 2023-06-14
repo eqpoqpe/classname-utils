@@ -1,7 +1,7 @@
 {
   "name": "@eqpoqpe/classname-utils",
-  "version": "0.1.6",
-  "description": "",
+  "version": "0.1.7",
+  "description": "🔮 as you know.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
