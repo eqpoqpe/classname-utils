@@ -4,6 +4,7 @@ type inheritBaseClassName = string;
 
 /**
  * # classNameConcat
+ *
  * ```tsx
  * function Page(props: PageProps): JSX.Element {
  *  const { className } = props;
