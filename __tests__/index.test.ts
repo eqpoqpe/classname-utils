@@ -7,8 +7,8 @@ test("className concat", () => {
 });
 
 test("className concat with inheritOrBase", () => {
-  expect(classNameConcat(["flex", "min-h-screen", "flex-col", "items-center", "justify-between", "p-24", "base"]))
-    .toBe("flex min-h-screen flex-col items-center justify-between p-24 base");
+  expect(classNameConcat(["flex", "min-h-screen", "flex-col", "items-center", "justify-between", "p-24"], "base flex-col"))
+    .toBe("flex min-h-screen flex-col items-center justify-between p-24 base flex-col");
 });
 
 test("isMeaningless", () => {
