@@ -8,5 +8,5 @@ npm install @eqpoqpe/classname-utils
 
 ## Examples
 ```tsx
-<div className={classNameConcat("base", [theme ? "dark" : "light"])}></div>
+<div className={classNameConcat([theme ? "dark" : "light"])}></div>
 ```
