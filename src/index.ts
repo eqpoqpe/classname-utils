@@ -2,29 +2,27 @@ import { isMeaningless } from "./String";
 
 type inheritBaseClassName = string;
 
-/**
- * # classNameConcat
- *
- * ```tsx
- * function Page(props: PageProps): JSX.Element {
- *  const { className } = props;
- * 
- *  return (
- *    <div className={classNameConcat([className, "flex-col"])}></div>
- *  );
- * }
- * ```
- */
-function classNameConcat(list: Array<string | inheritBaseClassName>): string {
-  const classNameString = list.reduce((a, c) => {
-    const a_r = isMeaningless(a);
-    const c_r = isMeaningless(c);
+function classNameConcat(classNameList: Array<string | inheritBaseClassName>): string {
+  const classNameString = classNameList.reduce((prevValue: string, currValue: string) => {
+    const prevValueResult = isMeaningless(prevValue);
+    const currValueResult = isMeaningless(currValue);
 
-    if (a_r.result) return c;
-    if (c_r.result) return a;
+    // valid string of prevValueResult
+    if (!prevValueResult.result) {
+      if (!currValueResult.result)
+        return prevValueResult.data.concat(" ", currValueResult.data);
+      else
+        return prevValueResult.data;
+    }
 
-    return a.concat(" ", c_r.data);
-  }, "").trim();
+    // invalid string of prevValueResult
+    else {
+      if (!currValueResult.result)
+        return currValueResult.data;
+      else
+        return prevValueResult.data;
+    }
+  });
 
   return classNameString;
 }
