@@ -1,30 +1,18 @@
-import { isMeaningless } from "./String";
-
 type inheritBaseClassName = string;
 
-function classNameConcat(classNameList: Array<string | inheritBaseClassName>): string {
-  const classNameString = classNameList.reduce((prevValue: string, currValue: string) => {
-    const prevValueResult = isMeaningless(prevValue);
-    const currValueResult = isMeaningless(currValue);
+function classNameConcat(classNameList: Array<string | inheritBaseClassName | undefined>): string {
+  return classNameList.reduce((accumulator, currentValue) => {
+    if (currentValue !== undefined) {
+      const trimmedValue = currentValue.trim();
 
-    // valid string of prevValueResult
-    if (!prevValueResult.result) {
-      if (!currValueResult.result)
-        return prevValueResult.data.concat(" ", currValueResult.data);
-      else
-        return prevValueResult.data;
+      if (trimmedValue !== '') {
+        const normalizedValue = trimmedValue.replace(/\s+/g, ' ');
+        return accumulator === '' ? normalizedValue : `${accumulator} ${normalizedValue}`;
+      }
     }
 
-    // invalid string of prevValueResult
-    else {
-      if (!currValueResult.result)
-        return currValueResult.data;
-      else
-        return prevValueResult.data;
-    }
-  });
-
-  return classNameString;
+    return accumulator;
+  }, '');
 }
 
 export {
