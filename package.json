@@ -1,0 +1,36 @@
+{
+  "name": "@eqpoqpe/classname-utils",
+  "version": "0.2.0",
+  "description": "🔮 as you know.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist/* && tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eqpoqpe/classname-utils.git"
+  },
+  "keywords": [
+    "classNameConcat"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "author": "Ryan Martin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eqpoqpe/classname-utils/issues"
+  },
+  "homepage": "https://github.com/eqpoqpe/classname-utils#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.4"
+  }
+}
