@@ -1,6 +1,6 @@
 {
   "name": "@eqpoqpe/classname-utils",
-  "version": "0.2.0",
+  "version": "0.0.1",
   "description": "🔮 as you know.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
