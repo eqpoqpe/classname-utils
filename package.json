@@ -1,6 +1,6 @@
 {
   "name": "@eqpoqpe/classname-utils",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "🔮 as you know.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -40,6 +40,7 @@
       "esm"
     ],
     "outDir": "./dist",
+    "sourcemap": true,
     "dts": true
   }
 }

@@ -3,9 +3,8 @@ function trimAndCheckEmpty(value: string | undefined): string {
     const trimmedValue = value.trim();
     return trimmedValue !== "" ? trimmedValue : "";
   }
+
   return "";
 }
 
-export {
-  trimAndCheckEmpty
-};
+export { trimAndCheckEmpty };
