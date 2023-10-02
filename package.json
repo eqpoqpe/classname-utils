@@ -1,8 +1,9 @@
 {
   "name": "@eqpoqpe/classname-utils",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "🔮 as you know.",
-  "main": "dist/index.js",
+  "type": "module",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup ./src/index.ts",
